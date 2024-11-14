@@ -1,38 +1,23 @@
-# Proyecto de Pipeline de Limpieza de Datos
+# Pipeline Automatizado de Limpieza de Datos
 
-La limpieza de datos, como seguramente sabes, es necesaria pero bastante intimidante, especialmente cuando se trata de conjuntos de datos del mundo real. Este proyecto tiene como objetivo construir un pipeline de limpieza de datos que limpie automáticamente conjuntos de datos crudos, manejando valores faltantes, formateando datos y detectando valores atípicos.
+Este proyecto implementa un pipeline automatizado de limpieza de datos para procesar conjuntos de datos crudos. El pipeline se encarga de:
 
-## Enfoque del Proyecto
+- Manejar valores faltantes y formatos inconsistentes
+- Detectar y eliminar valores atípicos
+- Registrar cada paso de limpieza para auditoría y rastreo
 
-### 1. **Manipulación de Datos**
-   Aplicar transformaciones para limpiar los conjuntos de datos. Esto incluye tareas como:
-   - Imputación de valores faltantes.
-   - Conversión de tipos de datos.
-   - Normalización de formatos (por ejemplo, fechas, cadenas).
+## Estructura del Proyecto
 
-### 2. **Manejo de Errores**
-   Abordar posibles errores durante el proceso de limpieza. El pipeline debería poder manejar:
-   - Errores al procesar columnas o valores inesperados.
-   - Datos faltantes o mal formateados.
-
-### 3. **Diseño de Código Modular**
-   Crear funciones reutilizables para diferentes tareas de limpieza. El código está diseñado de manera modular para facilitar su mantenimiento y reutilización. Las funciones pueden ser fácilmente modificadas o extendidas para proyectos futuros.
-
-## Tecnologías Usadas
-Este proyecto hace uso principalmente de la librería **pandas** para la manipulación de datos.
-
-- **pandas**: Para cargar, limpiar y transformar los datos.
-
-## Funcionalidades
-
-- Limpieza automática de datos crudos.
-- Manejo de valores faltantes.
-- Formateo y normalización de datos.
-- Detección de valores atípicos (outliers).
-- Registro de acciones de limpieza y errores.
+- `data/raw`: Datos de entrada crudos
+- `data/processed`: Datos procesados y listos para análisis
+- `src/data_cleaning.py`: Módulo con funciones de limpieza
+- `src/main.py`: Script principal para ejecutar el pipeline
+- `config.yaml`: Archivo de configuración con parámetros de limpieza
+- `logs/data_cleaning.log`: Log del pipeline de limpieza
 
 ## Instalación
 
-1. Clona este repositorio:
+1. Clona el repositorio y navega al directorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/ivonnemdupont/automated_data-cleaning-pipeline.git
+   cd automated_data-cleaning-pipeline
